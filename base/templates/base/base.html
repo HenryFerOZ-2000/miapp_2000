@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Aplicación Django{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base/styles.css' %}">
+</head>
+<body>
+    <body>
+    <div class="container">
+        <h1 class="main-title">{% block header %}{% endblock %}</h1>
+        <div class="content">{% block content %}{% endblock %}</div>
+        <footer><p>© 2025 - Mi Aplicación Django</p></footer>
+    </div>
+</body>
+
+</body>
+</html>
+

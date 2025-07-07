@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Menú Principal{% endblock %}
+{% block header %}Menú Principal{% endblock %}
+
+{% block content %}
+    <a href="{% url 'calculadora' %}"><button>🧮 Calculadora</bucd tton></a>
+    <a href="{% url 'texto' %}"><button>🔡 Conversor de Texto</button></a>
+    <a href="#"><button>🔐 Generador de Contraseña</button></a>
+{% endblock %}

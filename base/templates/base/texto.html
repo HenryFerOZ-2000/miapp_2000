@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Conversor de Texto{% endblock %}
+{% block header %}🔡 Conversor de Texto{% endblock %}
+
+{% block content %}
+<div class="card">
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="texto" rows="4" cols="50" placeholder="Escribe tu texto aquí..." required></textarea><br><br>
+        <div class="button-group">
+            <button type="submit" name="accion" value="mayusculas">A MAYÚSCULAS</button>
+            <button type="submit" name="accion" value="minusculas">a minúsculas</button>
+        </div>
+    </form>
+
+    {% if resultado %}
+        <p class="resultado">Resultado: {{ resultado }}</p>
+    {% endif %}
+
+    <a href="{% url 'menu' %}">← Volver al Menú</a>
+</div>
+{% endblock %}
